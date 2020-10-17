@@ -52,9 +52,9 @@ module.exports.datastores = {
     // url: 'mysql://user:password@host:port/database',
 
     adapter: 'sails-postgresql',
-    host: 'localhost',
-    user: 'postgres',
-    password: 'admin',
+    host: '45.33.15.118',
+    user: 'admin',
+    password: 'sF6Bur4TM2',
     database: 'integradordb'
 
   },
