@@ -60,6 +60,7 @@ module.exports = {
       }
       listaProgramacion.push(dataProgramacion);
     }
+    sails.log(listaProgramacion);
     res.json({ schedule: listaProgramacion });
 
   },
