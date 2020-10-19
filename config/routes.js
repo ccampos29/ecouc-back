@@ -34,6 +34,7 @@ module.exports.routes = {
   'POST /DivisionPosition/create':'employee/DivisionPositionController.create',
   //BoteBasuraController
   'POST /BoteBasura/create': 'registroBasura/BoteBasuraController.create',
+  'GET /BoteBasura/viewAll': 'registroBasura/BoteBasuraController.viewAll',
   //RegistroDiarioController
   'POST /RegistroDiario/create': 'registroBasura/RegistroDiarioController.create',
   'GET /RegistroDiario/viewAll': 'registroBasura/RegistroDiarioController.viewAll',
