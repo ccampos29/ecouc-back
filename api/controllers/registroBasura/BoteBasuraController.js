@@ -28,13 +28,28 @@ module.exports = {
             }
         }, { fetch: true });
     },
+    viewOne(req, res) {
+        const data = req.body;
+        BoteBasura.findOne({ codigoQr: req.body.codigoQr })
+            .then((response) => {
+                if (response) {
+                    res.json({dump: response});
+                } else {
+                    res.serverError("no se encontraron registros con el codigoQr");
+                }
+            }).catch((error) => {
+                res.serverError("hubo un error al tratar de recuperer datos del bote de basura");
+            })
+
+
+    },
     viewAll(req, res) {
         //se verifica los permisos la funcion includes retorna true false al comparar un valor con la lista de permission
         //if(!req.permissions.includes("viewAllPermission")) return res.status(400).json({err:'No tiene permisos para acceder a este recurso'});
 
         BoteBasura.find()
             .then((trashs) => {
-                res.json({dumps: trashs});
+                res.json({ dumps: trashs });
             })
             .catch((err) => {
                 res.serverError("no se encontro datos que mostrar ", err);
