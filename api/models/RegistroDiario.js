@@ -27,7 +27,7 @@ module.exports = {
       allowNull:true
     },
     estadoBoteBasura:{
-      type:'integer',
+      type:'number',
       allowNull:true
     },
     userFk:{
